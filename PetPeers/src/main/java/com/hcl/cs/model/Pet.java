@@ -28,9 +28,9 @@ public class Pet {
 	@Column(name="PETPLACE")
 	private String petPlace;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name="PETOWNERID")
-    private User user;
+//	@ManyToOne(cascade=CascadeType.ALL)
+//    @JoinColumn(name="PETOWNERID")
+//    private User user;
 
 	public long getPetId() {
 		return petId;
@@ -64,11 +64,11 @@ public class Pet {
 		this.petPlace = petPlace;
 	}
 
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}	
+//	public User getUser() {
+//		return user;
+//	}
+//
+//	public void setUser(User user) {
+//		this.user = user;
+//	}	
 }
