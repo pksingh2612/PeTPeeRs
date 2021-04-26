@@ -15,6 +15,11 @@ public class MainController {
 		return "myPetsPage";
 	}
 	
+	@RequestMapping(value="/addPet",method=RequestMethod.GET)
+	public String addPet() {
+		return "addPetPage";
+	}
+	
 	//savePet(@ModelAttribute("pet") Pet pet)
 	
 	@RequestMapping(value="/savePet",method=RequestMethod.GET)

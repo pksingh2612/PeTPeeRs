@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
 	<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 		<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+		<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 			<!DOCTYPE html>
 			<html>
 
@@ -44,10 +45,10 @@
 									<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#">My Pet</a>
+									<a class="nav-link" href="/PetPeers/myPets">My Pet</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#">Add Pet</a>
+									<a class="nav-link" href="/PetPeers/addPet">Add Pet</a>
 								</li>
 							</ul>
 							<ul class="navbar-nav">
@@ -101,7 +102,10 @@
 				</section>
 
 				<footer>
-					<!-- Empty -->
+					<c:set var = "now" value = "<%= new java.util.Date()%>" />
+					<p class="text-center text-muted">&#169; Copyright
+						<fmt:formatDate pattern = "yyyy" value = "${now}" /> HCLT
+					</p>
 				</footer>
 			</body>
 
