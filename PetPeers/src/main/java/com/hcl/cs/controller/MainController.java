@@ -20,11 +20,16 @@ public class MainController {
 		return "addPetPage";
 	}
 	
+	@RequestMapping(value="/home")
+	public String home() {
+		return "homePage";
+	}
+	
 	//savePet(@ModelAttribute("pet") Pet pet)
 	
 	@RequestMapping(value="/savePet",method=RequestMethod.GET)
 	public String savePet() {
-		return "homePage.jsp";
+		return "homePage";
 	}
 	 
 	//buyPet(HttpServletRequest request)
