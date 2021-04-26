@@ -408,7 +408,7 @@
 
         </pluginManagement>
 
-        <finalName>SpringHibernateIntegration</finalName>
+        <finalName>PetPeers</finalName>
 
     </build>
 </project>
