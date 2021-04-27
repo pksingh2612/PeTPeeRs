@@ -10,38 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.apache.log4j.Logger;
 import com.hcl.cs.model.Pet;
-
-@Controller
-public class MainController {
-	Logger logger = Logger.getLogger(MainController.class);
-	//myPets(HttpServletRequest request)
-	
-	@RequestMapping(value="/myPets",method=RequestMethod.GET)
-	public String myPets() {
-		return "myPetsPage";
-	}
-	
-	@RequestMapping(value="/addPet",method=RequestMethod.GET)
-	public String addPet(ModelMap map) {
-		Pet pet = new Pet();
-		map.addAttribute("petForm",pet);
-		return "addPetPage";
-	}
-	
-	@RequestMapping(value="/home")
-	public String home() {
-		return "homePage";
-	}
-	
-	//savePet(@ModelAttribute("pet") Pet pet)
-
-	@RequestMapping(value="/savePet",method=RequestMethod.POST)
-	public String savePet(@Validated @ModelAttribute("petForm") Pet pet,BindingResult result,ModelMap map) {
-		logger.info("Inside savePet() ");
-		String viewPage="";
-		if(result.hasErrors()) {
-			viewPage="addPetPage";
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.InitBinder;
@@ -52,7 +20,7 @@ import com.hcl.cs.model.User;
 
 @Controller
 public class MainController {
-	Logger logger=Logger.getLogger(MainController.class);
+	Logger logger = Logger.getLogger(MainController.class);
 	
 	/*@Autowired
 	private User user;*/
@@ -112,6 +80,35 @@ public class MainController {
 	public String logout() {
 		return "loginPage";
 	}
+	
+	
+	//myPets(HttpServletRequest request)
+	
+	@RequestMapping(value="/myPets",method=RequestMethod.GET)
+	public String myPets() {
+		return "myPetsPage";
+	}
+	
+	@RequestMapping(value="/addPet",method=RequestMethod.GET)
+	public String addPet(ModelMap map) {
+		Pet pet = new Pet();
+		map.addAttribute("petForm",pet);
+		return "addPetPage";
+	}
+	
+	@RequestMapping(value="/home")
+	public String home() {
+		return "homePage";
+	}
+	
+	//savePet(@ModelAttribute("pet") Pet pet)
+
+	@RequestMapping(value="/savePet",method=RequestMethod.POST)
+	public String savePet(@Validated @ModelAttribute("petForm") Pet pet,BindingResult result,ModelMap map) {
+		logger.info("Inside savePet() ");
+		String viewPage="";
+		if(result.hasErrors()) {
+			viewPage="addPetPage";
 	
 
 	//buyPet(HttpServletRequest request)
