@@ -78,21 +78,7 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td>3</td>
-										<td>Pindo</td>
-										<td>2</td>
-										<td>HY</td>
-										<td><a href="#">Buy</a></td>
-									</tr>
-									<tr>
-										<td>3</td>
-										<td>Pindo</td>
-										<td>2</td>
-										<td>HY</td>
-										<td><a href="#">Sold Out</a></td>
-									</tr>
-									<!-- <c:forEach items="${petList}" var="pet">
+									<c:forEach items="${petList}" var="pet">
 										<tr>
 											<td>${pet.petId}</td>
 											<td>${pet.petName}</td>
@@ -100,7 +86,7 @@
 											<td>${pet.petPlace}</td>
 											<td><a href="#">Buy</a></td>
 										</tr>
-									</c:forEach> -->
+									</c:forEach>
 								</tbody>
 							</table>
 						</div>

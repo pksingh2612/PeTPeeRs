@@ -1,5 +1,10 @@
 package com.hcl.cs.dao;
 
-public interface PetDAO {
+import java.util.List;
 
+import com.hcl.cs.model.Pet;
+
+public interface PetDAO {
+	public void savePet(Pet pet);
+	public List<Pet> getAllPets();
 }
