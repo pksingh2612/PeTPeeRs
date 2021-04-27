@@ -115,6 +115,7 @@
         class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
         <beans:property name="basename" value="classpath:messages" />
     </beans:bean>
-
+	
+	<beans:bean id="userValidator" class="com.hcl.cs.validator.UserValidator" />
 
 </beans:beans>
