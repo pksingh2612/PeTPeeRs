@@ -19,8 +19,8 @@ import org.springframework.web.bind.WebDataBinder;
 import com.hcl.cs.model.User;
 
 @Controller
-public class MainController {
-	Logger logger = Logger.getLogger(MainController.class);
+public class UserMainController {
+	Logger logger = Logger.getLogger(UserMainController.class);
 	
 	/*@Autowired
 	private User user;*/
@@ -33,6 +33,11 @@ public class MainController {
     private void initBinder(WebDataBinder binder) {
         binder.setValidator(validator);
     }
+	
+	@RequestMapping(value="/",method=RequestMethod.GET)
+	public String index() {
+		return "redirect:/login";
+	}
 	
 	@RequestMapping(value="/login",method=RequestMethod.GET)
 	public String login(ModelMap map) {
@@ -80,41 +85,48 @@ public class MainController {
 	public String logout() {
 		return "loginPage";
 	}
-	
-	
-	//myPets(HttpServletRequest request)
-	
-	@RequestMapping(value="/myPets",method=RequestMethod.GET)
-	public String myPets() {
-		return "myPetsPage";
-	}
-	
-	@RequestMapping(value="/addPet",method=RequestMethod.GET)
-	public String addPet(ModelMap map) {
-		Pet pet = new Pet();
-		map.addAttribute("petForm",pet);
-		return "addPetPage";
-	}
-	
-	@RequestMapping(value="/home")
-	public String home() {
-		return "homePage";
-	}
-	
-	//savePet(@ModelAttribute("pet") Pet pet)
-
-	@RequestMapping(value="/savePet",method=RequestMethod.POST)
-	public String savePet(@Validated @ModelAttribute("petForm") Pet pet,BindingResult result,ModelMap map) {
-		logger.info("Inside savePet() ");
-		String viewPage="";
-		if(result.hasErrors()) {
-			viewPage="addPetPage";
-	
-
-	//buyPet(HttpServletRequest request)
-	
-	@RequestMapping(value="/buyPet",method=RequestMethod.GET)
-	public String buyPet() {
-		return "redirect:/myPets";
-	}
+//	
+//	
+//	//myPets(HttpServletRequest request)
+//	
+//	@RequestMapping(value="/myPets",method=RequestMethod.GET)
+//	public String myPets() {
+//		return "myPetsPage";
+//	}
+//	
+//	@RequestMapping(value="/addPet",method=RequestMethod.GET)
+//	public String addPet(ModelMap map) {
+//		Pet pet = new Pet();
+//		map.addAttribute("petForm",pet);
+//		return "addPetPage";
+//	}
+//	
+//	@RequestMapping(value="/home")
+//	public String home() {
+//		return "homePage";
+//	}
+//	
+//	//savePet(@ModelAttribute("pet") Pet pet)
+//
+//	@RequestMapping(value="/savePet",method=RequestMethod.POST)
+//	public String savePet(@Validated @ModelAttribute("petForm") Pet pet,BindingResult result,ModelMap map) {
+//		logger.info("Inside savePet() ");
+//		String viewPage="";
+//		if(result.hasErrors()) {
+//			viewPage="addPetPage";
+//		}
+//		else {
+//			//map.addAttribute("petList",pet);
+//			viewPage="homePage";
+//		}
+//		return viewPage;
+//	}
+//
+//
+//	//buyPet(HttpServletRequest request)
+//	
+//	@RequestMapping(value="/buyPet",method=RequestMethod.GET)
+//	public String buyPet() {
+//		return "redirect:/myPets";
+//	}
 }

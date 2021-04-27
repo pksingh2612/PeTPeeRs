@@ -33,7 +33,7 @@
 					<header>
 						<!-- NavBar Started -->
 						<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-							<a class="navbar-brand" href="#">PetShop</a>
+							<a class="navbar-brand" href="/PetPeers/">PetShop</a>
 							<button class="navbar-toggler" type="button" data-toggle="collapse"
 								data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 								aria-expanded="false" aria-label="Toggle navigation">
@@ -49,7 +49,7 @@
 									<li class="nav-item"><a class="nav-link" href="/PetPeers/addPet">Add Pet</a></li>
 								</ul>
 								<ul class="navbar-nav">
-									<li class="nav-item"><a class="nav-link" href="#"> <svg
+									<li class="nav-item"><a class="nav-link" href="/PetPeers/register"> <svg
 												xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 												fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
 												<path
@@ -64,28 +64,29 @@
 
 					<section>
 						<div class="container mt-5">
-						<h2>Login</h2>
+							<h2>Login</h2>
 							<c:url var="userAction" value="/authenticateUser" />
-						<form:form action="${userAction}" method="post" modelAttribute="userForm"> 
-							<div class="mb-3">
-								<label for="UserName" class="form-label">UserName</label>
-								<form:input type="text"  path="userName" class="form-control" id="UserName"
-									aria-describedby="userName"/>
+							<form:form action="${userAction}" method="post" modelAttribute="userForm">
+								<div class="mb-3">
+									<label for="UserName" class="form-label">UserName</label>
+									<form:input type="text" path="userName" class="form-control" id="UserName"
+										aria-describedby="userName" />
 									<font color="red">
 										<form:errors path="userName" />
 									</font>
-								
-							</div>
-							<div class="mb-3">
-								<label for="Password" class="form-label">Password</label>
-								<form:input type="password" path="userPassword" class="form-control" id="Password"/>
+
+								</div>
+								<div class="mb-3">
+									<label for="Password" class="form-label">Password</label>
+									<form:input type="password" path="userPassword" class="form-control"
+										id="Password" />
 									<font color="red">
 										<form:errors path="userPassword" />
 									</font>
-							</div>
-							
-							<button type="submit" class="btn btn-primary">Login</button>
-							 </form:form> 
+								</div>
+
+								<button type="submit" class="btn btn-primary">Login</button>
+							</form:form>
 						</div>
 					</section>
 

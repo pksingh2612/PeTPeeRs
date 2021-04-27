@@ -27,7 +27,7 @@
 					<header>
 						<!-- NavBar Started -->
 						<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-							<a class="navbar-brand" href="#">PetShop</a>
+							<a class="navbar-brand" href="/PetPeers/">PetShop</a>
 							<button class="navbar-toggler" type="button" data-toggle="collapse"
 								data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 								aria-expanded="false" aria-label="Toggle navigation">
@@ -49,7 +49,7 @@
 								</ul>
 								<ul class="navbar-nav">
 									<li class="nav-item">
-										<a class="nav-link" href="#">
+										<a class="nav-link" href="/PetPeers/login">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 												fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
 												<path d="M7.5 1v7h1V1h-1z" />
