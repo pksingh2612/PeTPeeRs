@@ -9,6 +9,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.validation.Validator;
+import org.springframework.web.bind.WebDataBinder;
+
 import com.hcl.cs.model.User;
 
 @Controller
@@ -17,6 +23,15 @@ public class MainController {
 	
 	/*@Autowired
 	private User user;*/
+	
+	@Autowired
+    @Qualifier("userValidator")
+    private Validator validator;
+	
+	@InitBinder
+    private void initBinder(WebDataBinder binder) {
+        binder.setValidator(validator);
+    }
 	
 	@RequestMapping(value="/login",method=RequestMethod.GET)
 	public String login(ModelMap map) {

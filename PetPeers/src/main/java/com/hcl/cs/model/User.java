@@ -20,13 +20,12 @@ public class User {
 	@Column(name="USERID")
 	private long userId;
 	
-	@NotEmpty
 	@Column(name="USERNAME")
 	private String userName;
-	@NotEmpty
+
 	@Column(name="PASSWORD")
 	private String userPassword;
-	@NotEmpty
+
 	@Transient
 	private String confirmPassword;
 	
