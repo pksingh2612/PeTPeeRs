@@ -30,8 +30,8 @@ public class User {
 	@Transient
 	private String confirmPassword;
 	
-	@OneToMany(mappedBy="user")
-	private Set<Pet> pets = new HashSet<Pet>();
+	/*@OneToMany(mappedBy="user")
+	private Set<Pet> pets = new HashSet<Pet>();*/
 
 	public long getUserId() {
 		return userId;
@@ -65,13 +65,13 @@ public class User {
 		this.confirmPassword = confirmPassword;
 	}
 
-	public Set<Pet> getPets() {
+	/*public Set<Pet> getPets() {
 		return pets;
 	}
 
 	public void setPets(Set<Pet> pets) {
 		this.pets = pets;
-	}
+	}*/
 	
 	
 
