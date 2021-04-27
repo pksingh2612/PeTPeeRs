@@ -2,7 +2,14 @@ package com.hcl.cs.controller;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.hcl.cs.model.User;
 
 @Controller
 public class MainController {
@@ -11,25 +18,45 @@ public class MainController {
 	/*@Autowired
 	private User user;*/
 	
+	@RequestMapping(value="/login",method=RequestMethod.GET)
+	public String login(ModelMap map) {
+		User user = new User();
+		map.addAttribute("userForm",user);
+		return "loginPage";
+	}
+	
+	@RequestMapping(value="/register",method=RequestMethod.GET)
+	public String register(ModelMap map) {
+		User user = new User();
+		map.addAttribute("userForm",user);
+		return "registrationPage";
+	}
+	
 	@RequestMapping(value="/saveUser")
-	public String saveUser(){
-		if(true){
-			return "loginPage";
+	public String saveUser(@Validated @ModelAttribute("userForm") User user,BindingResult result,ModelMap map){
+		String viewPage="";
+		if(result.hasErrors()) {
+			viewPage="registrationPage";
 		}
 		else {
-			return "registrationPage";
+			//map.addAttribute("petList",pet);
+			viewPage="loginPage";
 		}
+		return viewPage;
 		
 	}
 	
-	@RequestMapping(value="/authenticateUser")
-	public String authenticateUser() {
-		if(true) {
-			return "homePage";
+	@RequestMapping(value="/authenticateUser",method=RequestMethod.POST)
+	public String authenticateUser(@Validated @ModelAttribute("userForm") User user,BindingResult result,ModelMap map) {
+		String viewPage="";
+		if(result.hasErrors()) {
+			viewPage="loginPage";
 		}
 		else {
-			return "loginPage";
+			//map.addAttribute("petList",pet);
+			viewPage="homePage";
 		}
+		return viewPage;
 	}
 	
 	

@@ -65,22 +65,22 @@
 					<section>
 						<div class="container mt-5">
 						<h2>Login</h2>
-							<c:url var="empAction" value="/insertEmp" />
-						<form:form action="${empAction}" method="post" modelAttribute="employeeForm"> 
+							<c:url var="userAction" value="/authenticateUser" />
+						<form:form action="${userAction}" method="post" modelAttribute="userForm"> 
 							<div class="mb-3">
-								<label for="exampleInputEmail1" class="form-label">UserName</label>
-								<form:input type="text"  path="" class="form-control" id="exampleInputEmail1"
+								<label for="UserName" class="form-label">UserName</label>
+								<form:input type="text"  path="userName" class="form-control" id="UserName"
 									aria-describedby="userName"/>
 									<font color="red">
-										<form:errors path="" />
+										<form:errors path="userName" />
 									</font>
 								
 							</div>
 							<div class="mb-3">
-								<label for="exampleInputPassword1" class="form-label">Password</label>
-								<form:input type="password" path="" class="form-control" id="exampleInputPassword1"/>
+								<label for="Password" class="form-label">Password</label>
+								<form:input type="password" path="userPassword" class="form-control" id="Password"/>
 									<font color="red">
-										<form:errors path="" />
+										<form:errors path="userPassword" />
 									</font>
 							</div>
 							
