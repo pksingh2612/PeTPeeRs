@@ -1,24 +1,20 @@
 package com.hcl.cs.controller;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.hcl.cs.model.User;
-
+@Controller
 public class MainController {
 	Logger logger=Logger.getLogger(MainController.class);
 	
-	@Autowired
-	private User user;
+	/*@Autowired
+	private User user;*/
 	
 	@RequestMapping(value="/saveUser")
-	public String saveUser(@ModelAttribute("user") User user){
-		if(){
-			return "SuccessloginPage";
+	public String saveUser(){
+		if(true){
+			return "loginPage";
 		}
 		else {
 			return "registrationPage";
@@ -27,22 +23,18 @@ public class MainController {
 	}
 	
 	@RequestMapping(value="/authenticateUser")
-	public String authenticateUser(HttpServletRequest request, @ModelAttribute("user") User user) {
-		if() {
-			return "SuccesshomePage";
+	public String authenticateUser() {
+		if(true) {
+			return "homePage";
 		}
 		else {
 			return "loginPage";
 		}
 	}
 	
-	@RequestMapping(value="/home")
-	public String home() {
-		return "homePage";
-	}
 	
 	@RequestMapping(value="/logout")
-	public String logout(HttpServletRequest request) {
+	public String logout() {
 		return "loginPage";
 	}
 	
