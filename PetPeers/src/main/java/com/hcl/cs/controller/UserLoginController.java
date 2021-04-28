@@ -1,5 +1,7 @@
 package com.hcl.cs.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -35,22 +37,34 @@ public class UserLoginController {
 	private UserService userService;
 	
 	@RequestMapping(value="/login",method=RequestMethod.GET)
-	public String login(ModelMap map) {
-		User user = new User();
-		map.addAttribute("userForm",user);
-		return "loginPage";
+	public String login(ModelMap map,HttpServletRequest request) {
+		String viewPage="";
+		if(request.getSession().getAttribute("sessionStatus") != null) {
+			viewPage="redirect:/home";
+		}
+		else {
+			User user = new User();
+			map.addAttribute("userForm",user);
+			viewPage="loginPage";
+		}
+		
+		return viewPage;
 	}
 	
 	@RequestMapping(value="/authenticateUser",method=RequestMethod.POST)
-	public String authenticateUser(@Validated @ModelAttribute("userForm") User user,BindingResult result,ModelMap map) {
+	public String authenticateUser(@Validated @ModelAttribute("userForm") User user,BindingResult result,ModelMap map,HttpServletRequest request) {
 		String viewPage="";
 		if(result.hasErrors()) {
 			viewPage="loginPage";
 		}
 		else {
 			System.out.println(user.getUserName()+user.getUserPassword());
-			User user1=userService.authenticateUser(user.getUserName(), user.getUserPassword());
-			if(user1 != null) {
+			User foundedUser=userService.authenticateUser(user.getUserName(), user.getUserPassword());
+			if(foundedUser != null) {
+				request.getSession().setAttribute("sessionStatus",true);
+				request.getSession().setAttribute("userid",foundedUser.getUserId());
+				request.getSession().setAttribute("username",foundedUser.getUserName());
+				request.getSession().setAttribute("password",foundedUser.getUserPassword());
 				viewPage="redirect:/home";
 			}
 			else {

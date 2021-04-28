@@ -42,7 +42,7 @@
 								</ul>
 								<ul class="navbar-nav">
 									<li class="nav-item">
-										<a class="nav-link" href="/PetPeers/login">
+										<a class="nav-link" href="/PetPeers/logout">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 												fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
 												<path d="M7.5 1v7h1V1h-1z" />

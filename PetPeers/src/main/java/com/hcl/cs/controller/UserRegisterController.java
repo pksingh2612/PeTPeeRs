@@ -42,10 +42,17 @@ public class UserRegisterController {
 	private UserService userService;
 	
 	@RequestMapping(value="/register",method=RequestMethod.GET)
-	public String register(ModelMap map) {
-		User user = new User();
-		map.addAttribute("userForm",user);
-		return "registrationPage";
+	public String register(ModelMap map,HttpServletRequest request) {	
+		String viewPage="";
+		if(request.getSession().getAttribute("sessionStatus") != null) {
+			viewPage="redirect:/home";
+		}
+		else {
+			User user = new User();
+			map.addAttribute("userForm",user);
+			return "registrationPage";
+		}
+		return viewPage;
 	}
 	
 	@RequestMapping(value="/saveUser",method=RequestMethod.POST)
