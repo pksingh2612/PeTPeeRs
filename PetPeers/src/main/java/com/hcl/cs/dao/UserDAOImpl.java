@@ -20,12 +20,13 @@ public class UserDAOImpl implements UserDAO {
 	
 	@Override
 	public void saveUser(User user) {
+		logger.info("Inside saveUser() dao");
 		sessionfactory.getCurrentSession().save(user);
-		
 	}
 
 	@Override
 	public User authenticateUser(String userName, String userPassword) {
+		logger.info("Inside authenticateUser() dao");
 		Query q=sessionfactory.getCurrentSession().createQuery("select u from User u where u.userName=? and u.userPassword=?");
 		q.setParameter(0, userName);
 		q.setParameter(1, userPassword);

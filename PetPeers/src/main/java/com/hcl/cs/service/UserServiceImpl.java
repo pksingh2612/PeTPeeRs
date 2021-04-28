@@ -20,11 +20,13 @@ public class UserServiceImpl implements UserService{
 	
 	@Override
 	public void saveUser(User user) {
+		logger.info("Inside saveUser() service");
 		userDao.saveUser(user);
 	}
 
 	@Override
 	public User authenticateUser(String userName, String userPassword) {
+		logger.info("Inside authenticateUser() service");
 		User user= userDao.authenticateUser(userName,userPassword);
 		return user;
 	}

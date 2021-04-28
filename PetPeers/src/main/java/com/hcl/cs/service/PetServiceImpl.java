@@ -35,12 +35,14 @@ public class PetServiceImpl implements PetService {
 	
 	@Override
 	public List<Pet> getMyPet(long userId){
+		logger.info("Inside getMyPet() service");
 		List<Pet> petList=petDao.getMyPet(userId);
 		return petList;
 	}
 	
 	@Override
 	public void buyPet(long userId,long petId) {
+		logger.info("Inside buyPet() service");
 		petDao.buyPet(userId,petId);
 	}
 }

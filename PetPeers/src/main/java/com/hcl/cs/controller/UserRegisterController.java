@@ -43,6 +43,7 @@ public class UserRegisterController {
 	
 	@RequestMapping(value="/register",method=RequestMethod.GET)
 	public String register(ModelMap map,HttpServletRequest request) {	
+		logger.info("Inside register() UserRegister Controller ");
 		String viewPage="";
 		if(request.getSession().getAttribute("sessionStatus") != null) {
 			viewPage="redirect:/home";
@@ -57,6 +58,7 @@ public class UserRegisterController {
 	
 	@RequestMapping(value="/saveUser",method=RequestMethod.POST)
 	public String saveUser(@Validated @ModelAttribute("userForm") User user,BindingResult result,ModelMap map){
+		logger.info("Inside saveUser() UserRegister Controller ");
 		String viewPage="";
 		if(result.hasErrors()) {
 			viewPage="registrationPage";
@@ -69,13 +71,10 @@ public class UserRegisterController {
 				viewPage="registrationPage";
 			}
 			else {
-				//System.out.println(user.getUserName()+user.getUserPassword()+user.getConfirmPassword());
 				userService.saveUser(user);
 				map.addAttribute("Msg","You are successfully registered. Please Login now");
 				map.addAttribute("colorMsg","green");
 				viewPage="loginPage";
-//				viewPage="redirect:/login";
-				
 			}
 		}
 		return viewPage;

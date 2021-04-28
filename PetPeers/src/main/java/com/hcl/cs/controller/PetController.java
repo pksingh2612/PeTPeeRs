@@ -30,7 +30,7 @@ public class PetController {
 	
 	@RequestMapping(value="/home",method=RequestMethod.GET)
 	public String home(ModelMap map,HttpServletRequest request) {
-		
+		logger.info("Inside home()  pet controller ");	
 		String viewPage="";
 		
 		if(request.getSession().getAttribute("sessionStatus") != null) {
@@ -47,7 +47,7 @@ public class PetController {
 
 	@RequestMapping(value="/savePet",method=RequestMethod.POST)
 	public String savePet(@Validated @ModelAttribute("petForm") Pet pet,BindingResult result,HttpServletRequest request) {
-		logger.info("Inside savePet() ");		
+		logger.info("Inside savePet()  pet controller ");		
         String viewPage="";
 		
 		if(request.getSession().getAttribute("sessionStatus") != null) {
@@ -68,6 +68,7 @@ public class PetController {
 	
 	@RequestMapping(value="/myPets",method=RequestMethod.GET)
 	public String myPets(HttpServletRequest request,ModelMap map) {
+		logger.info("Inside myPets()  pet controller ");
         String viewPage="";
 		
 		if(request.getSession().getAttribute("sessionStatus") != null) {
@@ -84,6 +85,7 @@ public class PetController {
 	
 	@RequestMapping(value="/addPet",method=RequestMethod.GET)
 	public String addPet(HttpServletRequest request, ModelMap map) {
+		logger.info("Inside addPet()  pet controller ");
 		String viewPage="";
 		
 		if(request.getSession().getAttribute("sessionStatus") != null) {
@@ -100,6 +102,7 @@ public class PetController {
 	
 	@RequestMapping(value="/buyPet/{pid}",method=RequestMethod.GET)
 	public String buyPet(HttpServletRequest request,@PathVariable("pid") long petId) {
+		logger.info("Inside buyPet()  pet controller ");
 		String viewPage="";
 		
 		if(request.getSession().getAttribute("sessionStatus") != null) {

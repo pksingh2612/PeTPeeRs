@@ -38,6 +38,7 @@ public class UserLoginController {
 	
 	@RequestMapping(value="/login",method=RequestMethod.GET)
 	public String login(ModelMap map,HttpServletRequest request) {
+		logger.info("Inside login() UserLogin Controller ");	
 		String viewPage="";
 		if(request.getSession().getAttribute("sessionStatus") != null) {
 			viewPage="redirect:/home";
@@ -53,12 +54,12 @@ public class UserLoginController {
 	
 	@RequestMapping(value="/authenticateUser",method=RequestMethod.POST)
 	public String authenticateUser(@Validated @ModelAttribute("userForm") User user,BindingResult result,ModelMap map,HttpServletRequest request) {
+		logger.info("Inside authenticateUser() UserLogin Controller ");
 		String viewPage="";
 		if(result.hasErrors()) {
 			viewPage="loginPage";
 		}
 		else {
-			System.out.println(user.getUserName()+user.getUserPassword());
 			User foundedUser=userService.authenticateUser(user.getUserName(), user.getUserPassword());
 			if(foundedUser != null) {
 				request.getSession().setAttribute("sessionStatus",true);
