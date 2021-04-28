@@ -42,6 +42,9 @@
 								</ul>
 								<ul class="navbar-nav">
 									<li class="nav-item">
+										<a class="nav-link"><c:out value="${sessionScope.username}"/></a>
+									</li>
+									<li class="nav-item">
 										<a class="nav-link" href="/PetPeers/logout">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 												fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
@@ -71,20 +74,14 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td>3</td>
-										<td>Pindo</td>
-										<td>2</td>
-										<td>HY</td>
-									</tr>
-									<!-- <c:forEach items="${petList}" var="pet">
-								<tr>
-									<td>${pet.employeeid}</td>
-									<td>${pet.name}</td>
-									<td>${pet.age}</td>
-									<td>${pet.address}</td>
-								</tr>
-							</c:forEach> -->
+									<c:forEach items="${petList}" var="pet">
+										<tr>
+											<td>${pet.petId}</td>
+											<td>${pet.petName}</td>
+											<td>${pet.petAge}</td>
+											<td>${pet.petPlace}</td>
+										</tr>
+									</c:forEach>
 								</tbody>
 							</table>
 						</div>

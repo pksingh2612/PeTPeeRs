@@ -36,6 +36,9 @@
 								</ul>
 								<ul class="navbar-nav">
 									<li class="nav-item">
+										<a class="nav-link"><c:out value="${sessionScope.username}"/></a>
+									</li>
+									<li class="nav-item">
 										<a class="nav-link" href="/PetPeers/logout">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 												fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
@@ -53,7 +56,6 @@
 					</header>
 
 					<section>
-						<c:out value="${sessionScope.username}"/>
 						<div class="container mt-5">
 							<table class="table table-bordered">
 								<thead>
@@ -72,7 +74,18 @@
 											<td>${pet.petName}</td>
 											<td>${pet.petAge}</td>
 											<td>${pet.petPlace}</td>
-											<td><a href="#">Buy</a></td>
+											<td>
+											<c:choose>
+											    <c:when test="${pet.user.userId !=null}">
+											       <font color="green">
+														Sold Out
+													</font>
+											    </c:when>    
+											    <c:otherwise>
+											       <a href="<c:url value='/buyPet/${pet.petId}'/>">Buy</a>
+											    </c:otherwise>
+											</c:choose>
+											</td>
 										</tr>
 									</c:forEach>
 								</tbody>
