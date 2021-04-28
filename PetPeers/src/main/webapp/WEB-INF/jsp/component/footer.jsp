@@ -9,12 +9,15 @@
 
         <body>
             <footer>
-                <c:set var="now" value="<%= new java.util.Date()%>" />
+            <div class="mt-5">
+            <c:set var="now" value="<%= new java.util.Date()%>" />
                 <p class="text-center text-muted">
                     &#169; Copyright
                     <fmt:formatDate pattern="yyyy" value="${now}" />
                     HCLT
                 </p>
+            </div>
+                
             </footer>
         </body>
 
