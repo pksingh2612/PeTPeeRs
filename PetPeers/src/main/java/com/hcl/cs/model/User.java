@@ -26,7 +26,7 @@ public class User {
 	@Column(name="PASSWORD")
 	private String userPassword;
 
-	@Transient
+	
 	private String confirmPassword;
 	
 	/*@OneToMany(mappedBy="user")

@@ -1,6 +1,7 @@
 package com.hcl.cs.controller;
 
 import org.apache.log4j.Logger;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -17,17 +18,19 @@ import org.springframework.validation.Validator;
 import org.springframework.web.bind.WebDataBinder;
 
 import com.hcl.cs.model.User;
+import com.hcl.cs.service.UserService;
+
 
 @Controller
 public class UserMainController {
 	Logger logger = Logger.getLogger(UserMainController.class);
 	
-	/*@Autowired
-	private User user;*/
-	
 	@Autowired
     @Qualifier("userValidator")
     private Validator validator;
+	
+	@Autowired
+	private UserService userService;
 	
 	@InitBinder
     private void initBinder(WebDataBinder binder) {
@@ -53,14 +56,15 @@ public class UserMainController {
 		return "registrationPage";
 	}
 	
-	@RequestMapping(value="/saveUser")
+	@RequestMapping(value="/saveUser",method=RequestMethod.POST)
 	public String saveUser(@Validated @ModelAttribute("userForm") User user,BindingResult result,ModelMap map){
 		String viewPage="";
 		if(result.hasErrors()) {
 			viewPage="registrationPage";
 		}
 		else {
-			//map.addAttribute("petList",pet);
+			//System.out.println(user.getUserName()+user.getUserPassword()+user.getConfirmPassword());
+			userService.saveUser(user);
 			viewPage="loginPage";
 		}
 		return viewPage;
@@ -74,7 +78,6 @@ public class UserMainController {
 			viewPage="loginPage";
 		}
 		else {
-			//map.addAttribute("petList",pet);
 			viewPage="homePage";
 		}
 		return viewPage;

@@ -77,7 +77,7 @@
 								</div>
 								<div class="mb-3">
 									<label for="Password" class="form-label">Password</label>
-									<form:input type="userPassword" path="userPassword" class="form-control"
+									<form:input type="password" path="userPassword" class="form-control"
 										id="userPassword" />
 									<font color="red">
 										<form:errors path="userPassword" />
