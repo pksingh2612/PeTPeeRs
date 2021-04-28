@@ -2,12 +2,17 @@ package com.hcl.cs.model;
 
 
 
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
@@ -29,8 +34,8 @@ public class User {
 	@Transient
 	private String confirmPassword;
 	
-	/*@OneToMany(mappedBy="user")
-	private Set<Pet> pets = new HashSet<Pet>();*/
+	@OneToMany(mappedBy="user",fetch=FetchType.EAGER,cascade = CascadeType.ALL,orphanRemoval=true)
+	private Set<Pet> pets = new HashSet<Pet>();
 
 	public long getUserId() {
 		return userId;
@@ -64,28 +69,12 @@ public class User {
 		this.confirmPassword = confirmPassword;
 	}
 
-	public User(long userId, String userName, String userPassword, String confirmPassword) {
-		super();
-		this.userId = userId;
-		this.userName = userName;
-		this.userPassword = userPassword;
-		this.confirmPassword = confirmPassword;
-	}
-
-	public User() {
-		super();
-	}
-
-	/*public Set<Pet> getPets() {
+	public Set<Pet> getPets() {
 		return pets;
 	}
 
 	public void setPets(Set<Pet> pets) {
 		this.pets = pets;
-	}*/
-	
-	
-	
-	
+	}
 
 }
