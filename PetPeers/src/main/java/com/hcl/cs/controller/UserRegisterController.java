@@ -55,9 +55,19 @@ public class UserRegisterController {
 			viewPage="registrationPage";
 		}
 		else {
-			System.out.println(user.getUserName()+user.getUserPassword()+user.getConfirmPassword());
-			userService.saveUser(user);
-			viewPage="redirect:/login";
+			if(userService.checkUserByUserName(user.getUserName())!=null)
+			{		
+				map.addAttribute("Msg","User Name already in use. Please select a different User Name");
+				map.addAttribute("colorMsg","red");
+				viewPage="registrationPage";
+			}
+			else {
+				//System.out.println(user.getUserName()+user.getUserPassword()+user.getConfirmPassword());
+				userService.saveUser(user);
+//				map.addAttribute("Msg","You are successfully registered. Please Login now");
+//				map.addAttribute("colorMsg","green");
+				viewPage="redirect:/login";
+			}
 		}
 		return viewPage;
 	}

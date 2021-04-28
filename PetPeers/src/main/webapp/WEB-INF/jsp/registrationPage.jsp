@@ -51,6 +51,9 @@
 					<section>
 						<div class="container mt-5">
 							<h2>Register</h2>
+							<font color="${colorMsg}">
+								<p>${Msg}</p>
+							</font>
 							<c:url var="userAction" value="/saveUser" />
 							<form:form action="${userAction}" method="post" modelAttribute="userForm">
 								<div class="mb-3">

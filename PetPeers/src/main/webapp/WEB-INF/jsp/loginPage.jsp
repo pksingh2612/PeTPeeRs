@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
 	<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 				<!DOCTYPE html>
 				<html>
 
@@ -47,8 +48,11 @@
 					<section>
 						<div class="container mt-5">
 							<h2>Login</h2>
-							<c:url var="userLoginAction" value="/authenticateUser" />
-							<form:form action="${userLoginAction}" method="post" modelAttribute="userLoginForm">
+							<font color="${colorMsg}">
+								<p>${Msg}</p>
+							</font>
+							<c:url var="userAction" value="/authenticateUser" />
+							<form:form action="${userAction}" method="post" modelAttribute="userForm">
 								<div class="mb-3">
 									<label for="UserName" class="form-label">UserName</label>
 									<form:input type="text" path="userName" class="form-control" id="UserName"

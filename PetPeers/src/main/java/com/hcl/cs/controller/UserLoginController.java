@@ -37,12 +37,12 @@ public class UserLoginController {
 	@RequestMapping(value="/login",method=RequestMethod.GET)
 	public String login(ModelMap map) {
 		User user = new User();
-		map.addAttribute("userLoginForm",user);
+		map.addAttribute("userForm",user);
 		return "loginPage";
 	}
 	
 	@RequestMapping(value="/authenticateUser",method=RequestMethod.POST)
-	public String authenticateUser(@Validated @ModelAttribute("userLoginForm") User user,BindingResult result,ModelMap map) {
+	public String authenticateUser(@Validated @ModelAttribute("userForm") User user,BindingResult result,ModelMap map) {
 		String viewPage="";
 		if(result.hasErrors()) {
 			viewPage="loginPage";
@@ -54,7 +54,9 @@ public class UserLoginController {
 				viewPage="redirect:/home";
 			}
 			else {
-				viewPage="redirect:/login";
+				map.addAttribute("Msg","Either User Name or Password or both are invalid");
+				map.addAttribute("colorMsg","red");
+				viewPage="loginPage";
 			}
 		}
 			return viewPage;
