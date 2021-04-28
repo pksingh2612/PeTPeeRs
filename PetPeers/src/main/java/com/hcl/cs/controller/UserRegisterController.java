@@ -64,9 +64,11 @@ public class UserRegisterController {
 			else {
 				//System.out.println(user.getUserName()+user.getUserPassword()+user.getConfirmPassword());
 				userService.saveUser(user);
-//				map.addAttribute("Msg","You are successfully registered. Please Login now");
-//				map.addAttribute("colorMsg","green");
-				viewPage="redirect:/login";
+				map.addAttribute("Msg","You are successfully registered. Please Login now");
+				map.addAttribute("colorMsg","green");
+				viewPage="loginPage";
+//				viewPage="redirect:/login";
+				
 			}
 		}
 		return viewPage;
