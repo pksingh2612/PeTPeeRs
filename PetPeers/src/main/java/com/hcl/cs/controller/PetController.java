@@ -28,45 +28,89 @@ public class PetController {
 	@Autowired
 	private PetService petService;
 	
-	@RequestMapping(value="/home")
-	public String home(ModelMap map) {
-		List<Pet> petList = petService.getAllPets();
-		map.addAttribute("petList",petList);
-		return "homePage";
+	@RequestMapping(value="/home",method=RequestMethod.GET)
+	public String home(ModelMap map,HttpServletRequest request) {
+		
+		String viewPage="";
+		
+		if(request.getSession().getAttribute("sessionStatus") != null) {
+			List<Pet> petList = petService.getAllPets();
+			map.addAttribute("petList",petList);
+			viewPage="homePage";
+		}
+		else {
+			viewPage="redirect:/login";
+		}
+		
+		return viewPage;
 	}
 
 	@RequestMapping(value="/savePet",method=RequestMethod.POST)
-	public String savePet(@Validated @ModelAttribute("petForm") Pet pet,BindingResult result) {
-		logger.info("Inside savePet() ");
-		String viewPage="";
-		if(result.hasErrors()) {
-			viewPage="addPetPage";
+	public String savePet(@Validated @ModelAttribute("petForm") Pet pet,BindingResult result,HttpServletRequest request) {
+		logger.info("Inside savePet() ");		
+        String viewPage="";
+		
+		if(request.getSession().getAttribute("sessionStatus") != null) {
+			if(result.hasErrors()) {
+				viewPage="addPetPage";
+			}
+			else {
+				petService.savePet(pet);
+				viewPage="redirect:/home";
+			}
 		}
 		else {
-			petService.savePet(pet);
-			viewPage="redirect:/home";
+			viewPage="redirect:/login";
 		}
+		
 		return viewPage;
 	}
 	
 	@RequestMapping(value="/myPets",method=RequestMethod.GET)
 	public String myPets(HttpServletRequest request,ModelMap map) {
-		List<Pet> petList = petService.getMyPet((long) request.getSession().getAttribute("userid"));
-		map.addAttribute("petList",petList);
-		return "myPetsPage";
+        String viewPage="";
+		
+		if(request.getSession().getAttribute("sessionStatus") != null) {
+			List<Pet> petList = petService.getMyPet((long) request.getSession().getAttribute("userid"));
+			map.addAttribute("petList",petList);
+			viewPage="myPetsPage";
+		}
+		else {
+			viewPage="redirect:/login";
+		}
+		
+		return viewPage;
 	}
 	
 	@RequestMapping(value="/addPet",method=RequestMethod.GET)
-	public String addPet(ModelMap map) {
-		Pet pet = new Pet();
-		map.addAttribute("petForm",pet);
-		return "addPetPage";
+	public String addPet(HttpServletRequest request, ModelMap map) {
+		String viewPage="";
+		
+		if(request.getSession().getAttribute("sessionStatus") != null) {
+			Pet pet = new Pet();
+			map.addAttribute("petForm",pet);
+			viewPage="addPetPage";
+		}
+		else {
+			viewPage="redirect:/login";
+		}
+		
+		return viewPage;
 	}
 	
 	@RequestMapping(value="/buyPet/{pid}",method=RequestMethod.GET)
 	public String buyPet(HttpServletRequest request,@PathVariable("pid") long petId) {
-		petService.buyPet((long) request.getSession().getAttribute("userid"),petId);
-		return "redirect:/myPets";
+		String viewPage="";
+		
+		if(request.getSession().getAttribute("sessionStatus") != null) {
+			petService.buyPet((long) request.getSession().getAttribute("userid"),petId);
+			viewPage="redirect:/myPets";
+		}
+		else {
+			viewPage="redirect:/login";
+		}
+		
+		return viewPage;
 	}
 	
 }
