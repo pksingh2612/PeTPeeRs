@@ -77,4 +77,17 @@ public class User {
 		this.pets = pets;
 	}
 
+	public User(String userName, String userPassword, String confirmPassword) {
+		super();
+		this.userName = userName;
+		this.userPassword = userPassword;
+		this.confirmPassword = confirmPassword;
+	}
+
+	public User() {
+		super();
+	}
+	
+	
+
 }

@@ -8,9 +8,10 @@ import org.springframework.stereotype.Repository;
 
 import com.hcl.cs.model.User;
 import com.hcl.cs.service.UserServiceImpl;
-
+import org.springframework.transaction.annotation.Transactional;
 
 @Repository
+@Transactional
 public class UserDAOImpl implements UserDAO {
 	
 	Logger logger = Logger.getLogger(UserDAOImpl.class); 
