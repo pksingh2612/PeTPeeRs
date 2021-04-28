@@ -22,9 +22,9 @@ public class UserDAOImpl implements UserDAO {
 
 	@Override
 	public User authenticateUser(String userName, String userPassword) {
-		Query q=sessionfactory.getCurrentSession().createQuery("select u from User u where u.username=? and u.password=?");
+		Query q=sessionfactory.getCurrentSession().createQuery("select u from User u where u.username=? and u.Password=?");
 		q.setParameter(0, userName);
-		q.setParameter(0, userPassword);
+		q.setParameter(1, userPassword);
 		User user = (User)q.uniqueResult();
 		return user;
 	}
