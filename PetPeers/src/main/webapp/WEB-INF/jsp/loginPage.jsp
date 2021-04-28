@@ -61,8 +61,8 @@
 					<section>
 						<div class="container mt-5">
 							<h2>Login</h2>
-							<c:url var="userAction" value="/authenticateUser" />
-							<form:form action="${userAction}" method="post" modelAttribute="userForm">
+							<c:url var="userLoginAction" value="/authenticateUser" />
+							<form:form action="${userLoginAction}" method="post" modelAttribute="userLoginForm">
 								<div class="mb-3">
 									<label for="UserName" class="form-label">UserName</label>
 									<form:input type="text" path="userName" class="form-control" id="UserName"
@@ -80,7 +80,6 @@
 										<form:errors path="userPassword" />
 									</font>
 								</div>
-
 								<button type="submit" class="btn btn-primary">Login</button>
 							</form:form>
 						</div>

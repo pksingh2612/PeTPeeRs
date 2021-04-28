@@ -64,6 +64,18 @@ public class User {
 		this.confirmPassword = confirmPassword;
 	}
 
+	public User(long userId, String userName, String userPassword, String confirmPassword) {
+		super();
+		this.userId = userId;
+		this.userName = userName;
+		this.userPassword = userPassword;
+		this.confirmPassword = confirmPassword;
+	}
+
+	public User() {
+		super();
+	}
+
 	/*public Set<Pet> getPets() {
 		return pets;
 	}
@@ -71,6 +83,8 @@ public class User {
 	public void setPets(Set<Pet> pets) {
 		this.pets = pets;
 	}*/
+	
+	
 	
 	
 

@@ -24,32 +24,22 @@ import com.hcl.cs.service.UserService;
 
 
 @Controller
-public class UserMainController {
-	Logger logger = Logger.getLogger(UserMainController.class);
+public class UserRegisterController {
+	
 	
 	@Autowired
-    @Qualifier("userValidator")
+    @Qualifier("userRegisterValidator")
     private Validator validator;
-	
-	@Autowired
-	private UserService userService;
 	
 	@InitBinder
     private void initBinder(WebDataBinder binder) {
         binder.setValidator(validator);
     }
 	
-	@RequestMapping(value="/",method=RequestMethod.GET)
-	public String index() {
-		return "redirect:/login";
-	}
+	Logger logger = Logger.getLogger(UserRegisterController.class);
 	
-	@RequestMapping(value="/login",method=RequestMethod.GET)
-	public String login(ModelMap map) {
-		User user = new User();
-		map.addAttribute("userForm",user);
-		return "loginPage";
-	}
+	@Autowired
+	private UserService userService;
 	
 	@RequestMapping(value="/register",method=RequestMethod.GET)
 	public String register(ModelMap map) {
@@ -65,36 +55,11 @@ public class UserMainController {
 			viewPage="registrationPage";
 		}
 		else {
-			//System.out.println(user.getUserName()+user.getUserPassword()+user.getConfirmPassword());
+			System.out.println(user.getUserName()+user.getUserPassword()+user.getConfirmPassword());
 			userService.saveUser(user);
-			viewPage="loginPage";
+			viewPage="redirect:/login";
 		}
 		return viewPage;
-		
 	}
 	
-	@RequestMapping(value="/authenticateUser",method=RequestMethod.POST)
-	public String authenticateUser(@Validated @ModelAttribute("userForm") User user,BindingResult result,ModelMap map) {
-		String viewPage="";
-		if(result.hasErrors()) {
-			viewPage="loginPage";
-		}
-		else {
-			User user1=userService.authenticateUser(user.getUserName(), user.getUserPassword());
-			if(user1 != null) {
-				viewPage="homePage";
-				
-			}
-			else {
-				viewPage="loginPage";
-			}
-		}
-			return viewPage;
-	}
-	
-	
-	@RequestMapping(value="/logout")
-	public String logout() {
-		return "loginPage";
-	}
 }

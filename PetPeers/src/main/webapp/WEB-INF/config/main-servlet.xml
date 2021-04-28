@@ -116,6 +116,8 @@
         <beans:property name="basename" value="classpath:messages" />
     </beans:bean>
 	
-	<beans:bean id="userValidator" class="com.hcl.cs.validator.UserValidator" />
+	<beans:bean id="userRegisterValidator" class="com.hcl.cs.validator.UserValidator" />
+	
+	<beans:bean id="userLoginValidator" class="com.hcl.cs.validator.LoginValidator" />
 
 </beans:beans>
