@@ -1,5 +1,7 @@
 package com.hcl.cs.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.log4j.Logger;
 
 import org.springframework.stereotype.Controller;
@@ -78,9 +80,16 @@ public class UserMainController {
 			viewPage="loginPage";
 		}
 		else {
-			viewPage="homePage";
+			User user1=userService.authenticateUser(user.getUserName(), user.getUserPassword());
+			if(user1 != null) {
+				viewPage="homePage";
+				
+			}
+			else {
+				viewPage="loginPage";
+			}
 		}
-		return viewPage;
+			return viewPage;
 	}
 	
 	

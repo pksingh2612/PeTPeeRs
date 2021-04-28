@@ -2,31 +2,31 @@ package com.hcl.cs.model;
 
 
 
-import java.util.HashSet;
-import java.util.Set;
-
 import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.persistence.Transient;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
+@Entity
+@Table(name="USER")
 public class User {
-	@Id
+    @Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="USERID")
 	private long userId;
 	
-	@Column(name="USERNAME")
+	
+	@Column(name="USERNAME",unique=true)
 	private String userName;
 
 	@Column(name="PASSWORD")
 	private String userPassword;
 
-	
+	@Transient
 	private String confirmPassword;
 	
 	/*@OneToMany(mappedBy="user")

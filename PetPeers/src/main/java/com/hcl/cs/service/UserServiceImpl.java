@@ -19,4 +19,11 @@ public class UserServiceImpl implements UserService{
 		userDao.saveUser(user);
 	}
 
+	@Override
+	public User authenticateUser(String userName, String userPassword) {
+		User user= userDao.authenticateUser(userName,userPassword);
+		return user;
+	}
+
+	
 }
