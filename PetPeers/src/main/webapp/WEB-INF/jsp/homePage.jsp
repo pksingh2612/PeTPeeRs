@@ -57,7 +57,7 @@
 
 					<section>
 						<div class="container mt-5">
-							<table class="table table-bordered">
+							<table class="table table-bordered" id="example">
 								<thead>
 									<tr>
 										<th> Pet ID </th>

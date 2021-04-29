@@ -63,7 +63,7 @@
 
 					<section>
 						<div class="container mt-5">
-							<table class="table table-bordered">
+							<table class="table table-bordered" id="example">
 								<caption class="table-secondary crtable">Pet List</caption>
 								<thead>
 									<tr>
