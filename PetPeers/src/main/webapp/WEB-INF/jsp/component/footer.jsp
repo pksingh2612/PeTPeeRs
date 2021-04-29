@@ -6,19 +6,28 @@
 
         <head>
             <meta charset="ISO-8859-1">
+            <style>
+				.footer {
+				   position: fixed;
+				   left: 0;
+				   bottom: 0;
+				   width: 100%;
+				   color: white;
+				   text-align: center;
+				}
+			</style>
         </head>
 
         <body>
             <footer>
-            <div class="mt-5">
-            <c:set var="now" value="<%= new java.util.Date()%>" />
-                <p class="text-center text-muted">
-                    &#169; Copyright
-                    <fmt:formatDate pattern="yyyy" value="${now}" />
-                    HCLT
-                </p>
-            </div>
-                
+	            <div class="footer mt-5">
+	            <c:set var="now" value="<%= new java.util.Date()%>" />
+	                <p class="text-center text-muted">
+	                    &#169; Copyright
+	                    <fmt:formatDate pattern="yyyy" value="${now}" />
+	                    HCLT
+	                </p>
+	            </div>
             </footer>
         </body>
 
