@@ -789,3 +789,1284 @@ Caused by: java.sql.SQLNonTransientConnectionException: Public Key Retrieval is 
 2021-04-29 08:19:58 WARN  HqlSqlWalker:996 - [DEPRECATION] Encountered positional parameter near line 1, column 68.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
 2021-04-29 08:19:58 WARN  HqlSqlWalker:996 - [DEPRECATION] Encountered positional parameter near line 1, column 58.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
 2021-04-29 08:19:58 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@693fe6c9: startup date [Thu Apr 29 08:19:56 IST 2021]; root of context hierarchy
+2021-04-29 08:32:42 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 08:32:43 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:32:43 IST 2021]; root of context hierarchy
+2021-04-29 08:32:43 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 08:32:43 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 08:32:43 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 08:32:43 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 08:32:43 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 08:32:44 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 08:32:44 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 08:32:44 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 08:32:44 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 08:32:44 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 08:32:44 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 08:32:44 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 08:32:44 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 08:32:44 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 08:32:44 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 08:32:44 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 08:32:44 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 08:32:44 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 08:32:44 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 08:32:44 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 08:32:44 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 08:32:44 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 08:32:44 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 08:32:44 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 08:32:44 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 08:32:44 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 08:32:44 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:32:44 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:32:44 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:32:44 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:32:44 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 08:32:44 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:32:44 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:32:44 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:32:44 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 08:32:45 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:32:43 IST 2021]; root of context hierarchy
+2021-04-29 08:32:45 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:32:43 IST 2021]; root of context hierarchy
+2021-04-29 08:32:45 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@1537e43
+2021-04-29 08:32:45 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:32:43 IST 2021]; root of context hierarchy
+2021-04-29 08:33:15 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 08:33:15 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:33:15 IST 2021]; root of context hierarchy
+2021-04-29 08:33:16 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 08:33:16 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 08:33:16 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 08:33:16 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 08:33:16 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 08:33:16 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 08:33:16 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 08:33:16 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 08:33:17 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 08:33:17 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 08:33:17 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 08:33:17 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 08:33:17 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 08:33:17 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 08:33:17 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 08:33:17 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 08:33:17 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 08:33:17 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 08:33:17 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 08:33:17 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 08:33:17 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 08:33:17 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 08:33:17 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 08:33:17 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 08:33:17 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 08:33:17 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 08:33:17 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:33:17 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:33:17 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:33:17 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:33:17 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 08:33:17 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:33:17 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:33:17 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:33:17 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 08:33:17 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:33:15 IST 2021]; root of context hierarchy
+2021-04-29 08:33:17 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:33:15 IST 2021]; root of context hierarchy
+2021-04-29 08:33:18 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@1537e43
+2021-04-29 08:33:18 WARN  PageNotFound:1176 - No mapping found for HTTP request with URI [/login] in DispatcherServlet with name ''
+2021-04-29 08:33:18 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:33:15 IST 2021]; root of context hierarchy
+2021-04-29 08:34:30 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 08:34:31 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:34:30 IST 2021]; root of context hierarchy
+2021-04-29 08:34:31 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 08:34:31 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 08:34:31 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 08:34:31 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 08:34:31 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 08:34:31 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 08:34:31 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 08:34:31 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 08:34:32 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 08:34:32 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 08:34:32 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 08:34:32 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 08:34:32 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 08:34:32 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 08:34:32 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 08:34:32 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 08:34:32 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 08:34:32 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 08:34:32 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 08:34:32 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 08:34:32 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 08:34:32 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 08:34:32 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 08:34:32 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 08:34:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 08:34:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 08:34:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:34:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:34:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:34:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 08:34:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:34:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:34:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:34:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:34:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 08:34:32 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:34:30 IST 2021]; root of context hierarchy
+2021-04-29 08:34:32 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:34:30 IST 2021]; root of context hierarchy
+2021-04-29 08:34:33 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@1537e43
+2021-04-29 08:34:33 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:34:30 IST 2021]; root of context hierarchy
+2021-04-29 08:47:07 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 08:47:08 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:47:08 IST 2021]; root of context hierarchy
+2021-04-29 08:47:08 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 08:47:08 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 08:47:08 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 08:47:08 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 08:47:08 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 08:47:09 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 08:47:09 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 08:47:09 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 08:47:09 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 08:47:09 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 08:47:09 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 08:47:09 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 08:47:09 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 08:47:09 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 08:47:09 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 08:47:09 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 08:47:09 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 08:47:09 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 08:47:09 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 08:47:09 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 08:47:09 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 08:47:09 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 08:47:09 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 08:47:09 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 08:47:09 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 08:47:09 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 08:47:09 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:47:09 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:47:09 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 08:47:09 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:47:09 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:47:09 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:47:09 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:47:09 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:47:09 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 08:47:09 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:47:08 IST 2021]; root of context hierarchy
+2021-04-29 08:47:09 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:47:08 IST 2021]; root of context hierarchy
+2021-04-29 08:47:10 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@1537e43
+2021-04-29 08:47:10 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:47:08 IST 2021]; root of context hierarchy
+2021-04-29 08:48:35 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 08:48:35 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:48:35 IST 2021]; root of context hierarchy
+2021-04-29 08:48:36 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 08:48:36 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 08:48:36 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 08:48:36 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 08:48:36 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 08:48:36 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 08:48:36 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 08:48:36 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 08:48:36 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 08:48:36 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 08:48:36 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 08:48:36 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 08:48:36 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 08:48:36 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 08:48:36 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 08:48:36 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 08:48:36 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 08:48:36 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 08:48:36 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 08:48:36 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 08:48:36 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 08:48:36 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 08:48:36 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 08:48:37 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 08:48:37 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 08:48:37 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 08:48:37 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:48:37 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:48:37 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 08:48:37 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:48:37 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:48:37 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:48:37 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:48:37 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:48:37 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 08:48:37 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:48:35 IST 2021]; root of context hierarchy
+2021-04-29 08:48:37 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:48:35 IST 2021]; root of context hierarchy
+2021-04-29 08:48:37 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@1537e43
+2021-04-29 08:48:37 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:48:35 IST 2021]; root of context hierarchy
+2021-04-29 08:49:29 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 08:49:29 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:49:29 IST 2021]; root of context hierarchy
+2021-04-29 08:49:30 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 08:49:30 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 08:49:30 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 08:49:30 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 08:49:30 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 08:49:30 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 08:49:30 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 08:49:30 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 08:49:31 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 08:49:31 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 08:49:31 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 08:49:31 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 08:49:31 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 08:49:31 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 08:49:31 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 08:49:31 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 08:49:31 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 08:49:31 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 08:49:31 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 08:49:31 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 08:49:31 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 08:49:31 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 08:49:31 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 08:49:31 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 08:49:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 08:49:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 08:49:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:49:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:49:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:49:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 08:49:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:49:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:49:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:49:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:49:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 08:49:31 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:49:29 IST 2021]; root of context hierarchy
+2021-04-29 08:49:31 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:49:29 IST 2021]; root of context hierarchy
+2021-04-29 08:49:31 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@1537e43
+2021-04-29 08:49:32 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:49:29 IST 2021]; root of context hierarchy
+2021-04-29 08:49:53 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 08:49:53 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:49:53 IST 2021]; root of context hierarchy
+2021-04-29 08:49:53 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 08:49:53 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 08:49:53 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 08:49:53 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 08:49:54 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 08:49:54 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 08:49:54 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 08:49:54 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 08:49:54 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 08:49:54 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 08:49:54 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 08:49:54 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 08:49:54 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 08:49:54 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 08:49:54 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 08:49:54 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 08:49:54 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 08:49:54 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 08:49:54 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 08:49:54 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 08:49:54 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 08:49:54 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 08:49:54 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 08:49:54 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 08:49:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 08:49:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 08:49:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:49:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:49:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:49:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 08:49:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:49:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:49:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:49:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:49:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 08:49:55 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:49:53 IST 2021]; root of context hierarchy
+2021-04-29 08:49:55 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:49:53 IST 2021]; root of context hierarchy
+2021-04-29 08:49:55 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@1537e43
+2021-04-29 08:49:55 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:49:53 IST 2021]; root of context hierarchy
+2021-04-29 08:51:28 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 08:51:29 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:51:29 IST 2021]; root of context hierarchy
+2021-04-29 08:51:29 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 08:51:29 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 08:51:29 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 08:51:29 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 08:51:29 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 08:51:30 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 08:51:30 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 08:51:30 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 08:51:30 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 08:51:30 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 08:51:30 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 08:51:30 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 08:51:30 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 08:51:30 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 08:51:30 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 08:51:30 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 08:51:30 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 08:51:30 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 08:51:30 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 08:51:30 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 08:51:30 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 08:51:30 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 08:51:30 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 08:51:30 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 08:51:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 08:51:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 08:51:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:51:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 08:51:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:51:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:51:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:51:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:51:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:51:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:51:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 08:51:30 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:51:29 IST 2021]; root of context hierarchy
+2021-04-29 08:51:30 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:51:29 IST 2021]; root of context hierarchy
+2021-04-29 08:51:31 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@1537e43
+2021-04-29 08:51:31 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:51:29 IST 2021]; root of context hierarchy
+2021-04-29 08:52:09 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 08:52:09 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:52:09 IST 2021]; root of context hierarchy
+2021-04-29 08:52:09 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 08:52:09 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 08:52:09 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 08:52:09 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 08:52:10 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 08:52:10 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 08:52:10 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 08:52:10 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 08:52:10 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 08:52:10 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 08:52:10 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 08:52:10 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 08:52:10 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 08:52:10 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 08:52:10 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 08:52:10 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 08:52:10 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 08:52:10 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 08:52:10 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 08:52:10 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 08:52:10 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 08:52:10 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 08:52:10 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 08:52:10 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 08:52:10 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 08:52:10 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 08:52:10 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:52:10 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:52:10 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:52:10 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 08:52:10 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:52:10 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:52:10 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:52:10 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:52:10 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 08:52:11 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:52:09 IST 2021]; root of context hierarchy
+2021-04-29 08:52:11 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:52:09 IST 2021]; root of context hierarchy
+2021-04-29 08:52:11 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@1537e43
+2021-04-29 08:52:11 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:52:09 IST 2021]; root of context hierarchy
+2021-04-29 08:53:05 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 08:53:05 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@741a8937: startup date [Thu Apr 29 08:53:05 IST 2021]; root of context hierarchy
+2021-04-29 08:53:06 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 08:53:06 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 08:53:06 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 08:53:06 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 08:53:06 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 08:53:06 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 08:53:06 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 08:53:06 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 08:53:06 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 08:53:06 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 08:53:06 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 08:53:07 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 08:53:07 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 08:53:07 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 08:53:07 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 08:53:07 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 08:53:07 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 08:53:07 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 08:53:07 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 08:53:07 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 08:53:07 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 08:53:07 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 08:53:07 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 08:53:07 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 08:53:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 08:53:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 08:53:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:53:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:53:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:53:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:53:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 08:53:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:53:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:53:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:53:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 08:53:07 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@741a8937: startup date [Thu Apr 29 08:53:05 IST 2021]; root of context hierarchy
+2021-04-29 08:53:07 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@741a8937: startup date [Thu Apr 29 08:53:05 IST 2021]; root of context hierarchy
+2021-04-29 08:53:07 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@1537e43
+2021-04-29 08:53:07 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@741a8937: startup date [Thu Apr 29 08:53:05 IST 2021]; root of context hierarchy
+2021-04-29 08:53:12 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 08:53:13 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:53:13 IST 2021]; root of context hierarchy
+2021-04-29 08:53:13 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 08:53:13 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 08:53:13 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 08:53:13 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 08:53:14 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 08:53:14 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 08:53:14 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 08:53:14 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 08:53:14 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 08:53:14 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 08:53:14 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 08:53:14 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 08:53:14 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 08:53:14 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 08:53:14 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 08:53:14 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 08:53:14 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 08:53:14 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 08:53:14 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 08:53:14 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 08:53:14 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 08:53:14 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 08:53:14 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 08:53:14 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 08:53:14 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 08:53:14 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 08:53:14 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:53:14 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:53:14 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:53:14 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 08:53:14 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:53:14 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:53:14 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:53:14 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:53:14 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 08:53:15 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:53:13 IST 2021]; root of context hierarchy
+2021-04-29 08:53:15 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:53:13 IST 2021]; root of context hierarchy
+2021-04-29 08:53:15 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@1537e43
+2021-04-29 08:53:15 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:53:13 IST 2021]; root of context hierarchy
+2021-04-29 08:53:34 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 08:53:34 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:53:34 IST 2021]; root of context hierarchy
+2021-04-29 08:53:35 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 08:53:35 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 08:53:35 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 08:53:35 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 08:53:35 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 08:53:35 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 08:53:35 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 08:53:35 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 08:53:36 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 08:53:36 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 08:53:36 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 08:53:36 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 08:53:36 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 08:53:36 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 08:53:36 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 08:53:36 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 08:53:36 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 08:53:36 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 08:53:36 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 08:53:36 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 08:53:36 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 08:53:36 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 08:53:36 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 08:53:36 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 08:53:36 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 08:53:36 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 08:53:36 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:53:36 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:53:36 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:53:36 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:53:36 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 08:53:36 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:53:36 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:53:36 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:53:36 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 08:53:36 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:53:34 IST 2021]; root of context hierarchy
+2021-04-29 08:53:36 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:53:34 IST 2021]; root of context hierarchy
+2021-04-29 08:53:37 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@1537e43
+2021-04-29 08:53:37 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:53:34 IST 2021]; root of context hierarchy
+2021-04-29 08:56:09 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 08:56:09 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:56:09 IST 2021]; root of context hierarchy
+2021-04-29 08:56:09 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 08:56:09 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 08:56:09 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 08:56:09 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 08:56:10 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 08:56:10 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 08:56:10 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 08:56:10 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 08:56:10 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 08:56:10 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 08:56:10 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 08:56:10 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 08:56:10 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 08:56:10 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 08:56:10 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 08:56:10 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 08:56:10 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 08:56:10 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 08:56:10 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 08:56:10 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 08:56:10 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 08:56:10 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 08:56:10 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 08:56:10 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 08:56:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 08:56:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 08:56:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:56:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:56:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:56:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 08:56:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:56:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:56:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:56:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:56:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 08:56:11 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:56:09 IST 2021]; root of context hierarchy
+2021-04-29 08:56:11 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:56:09 IST 2021]; root of context hierarchy
+2021-04-29 08:56:11 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@1537e43
+2021-04-29 08:56:11 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 08:56:09 IST 2021]; root of context hierarchy
+2021-04-29 08:56:37 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 08:56:38 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@741a8937: startup date [Thu Apr 29 08:56:38 IST 2021]; root of context hierarchy
+2021-04-29 08:56:38 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 08:56:38 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 08:56:38 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 08:56:38 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 08:56:39 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 08:56:39 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 08:56:39 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 08:56:39 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 08:56:39 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 08:56:39 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 08:56:39 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 08:56:39 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 08:56:39 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 08:56:39 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 08:56:39 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 08:56:39 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 08:56:39 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 08:56:39 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 08:56:39 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 08:56:39 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 08:56:39 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 08:56:39 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 08:56:39 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 08:56:39 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 08:56:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 08:56:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 08:56:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:56:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:56:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:56:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 08:56:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:56:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:56:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:56:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:56:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 08:56:40 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@741a8937: startup date [Thu Apr 29 08:56:38 IST 2021]; root of context hierarchy
+2021-04-29 08:56:40 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@741a8937: startup date [Thu Apr 29 08:56:38 IST 2021]; root of context hierarchy
+2021-04-29 08:56:40 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@1537e43
+2021-04-29 08:56:40 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@741a8937: startup date [Thu Apr 29 08:56:38 IST 2021]; root of context hierarchy
+2021-04-29 08:56:53 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 08:56:53 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:56:53 IST 2021]; root of context hierarchy
+2021-04-29 08:56:53 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 08:56:53 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 08:56:53 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 08:56:53 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 08:56:54 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 08:56:54 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 08:56:54 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 08:56:54 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 08:56:54 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 08:56:54 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 08:56:54 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 08:56:54 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 08:56:54 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 08:56:54 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 08:56:54 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 08:56:54 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 08:56:54 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 08:56:54 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 08:56:54 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 08:56:54 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 08:56:54 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 08:56:54 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 08:56:54 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 08:56:54 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 08:56:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 08:56:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 08:56:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:56:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 08:56:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:56:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:56:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:56:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:56:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:56:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:56:55 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 08:56:55 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:56:53 IST 2021]; root of context hierarchy
+2021-04-29 08:56:55 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:56:53 IST 2021]; root of context hierarchy
+2021-04-29 08:56:55 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@1537e43
+2021-04-29 08:56:55 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:56:53 IST 2021]; root of context hierarchy
+2021-04-29 08:59:23 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 08:59:23 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:59:23 IST 2021]; root of context hierarchy
+2021-04-29 08:59:23 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 08:59:24 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 08:59:24 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 08:59:24 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 08:59:24 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 08:59:24 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 08:59:24 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 08:59:24 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 08:59:24 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 08:59:24 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 08:59:24 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 08:59:24 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 08:59:24 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 08:59:24 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 08:59:24 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 08:59:25 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 08:59:25 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 08:59:25 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 08:59:25 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 08:59:25 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 08:59:25 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 08:59:25 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 08:59:25 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 08:59:25 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 08:59:25 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 08:59:25 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 08:59:25 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:59:25 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:59:25 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:59:25 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:59:25 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 08:59:25 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:59:25 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:59:25 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:59:25 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 08:59:25 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:59:23 IST 2021]; root of context hierarchy
+2021-04-29 08:59:25 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:59:23 IST 2021]; root of context hierarchy
+2021-04-29 08:59:25 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@573aeab2
+2021-04-29 08:59:25 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@423f8a73
+2021-04-29 08:59:25 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 08:59:23 IST 2021]; root of context hierarchy
+2021-04-29 09:16:33 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 09:16:33 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@741a8937: startup date [Thu Apr 29 09:16:33 IST 2021]; root of context hierarchy
+2021-04-29 09:16:33 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 09:16:33 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 09:16:33 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 09:16:33 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 09:16:34 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 09:16:34 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 09:16:34 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 09:16:34 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 09:16:34 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 09:16:34 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 09:16:34 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 09:16:34 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 09:16:34 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 09:16:34 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 09:16:34 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 09:16:34 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 09:16:34 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 09:16:34 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 09:16:34 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 09:16:34 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 09:16:34 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 09:16:34 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 09:16:34 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 09:16:34 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 09:16:35 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 09:16:35 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 09:16:35 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:16:35 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:16:35 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:16:35 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:16:35 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 09:16:35 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:16:35 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:16:35 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:16:35 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 09:16:35 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@741a8937: startup date [Thu Apr 29 09:16:33 IST 2021]; root of context hierarchy
+2021-04-29 09:16:35 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@741a8937: startup date [Thu Apr 29 09:16:33 IST 2021]; root of context hierarchy
+2021-04-29 09:16:35 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@433ef204
+2021-04-29 09:16:35 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@741a8937: startup date [Thu Apr 29 09:16:33 IST 2021]; root of context hierarchy
+2021-04-29 09:17:03 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 09:17:03 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:17:03 IST 2021]; root of context hierarchy
+2021-04-29 09:17:04 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 09:17:04 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 09:17:04 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 09:17:04 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 09:17:04 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 09:17:04 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 09:17:04 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 09:17:04 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 09:17:05 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 09:17:05 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 09:17:05 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 09:17:05 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 09:17:05 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 09:17:05 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 09:17:05 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 09:17:05 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 09:17:05 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 09:17:05 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 09:17:05 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 09:17:05 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 09:17:05 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 09:17:05 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 09:17:05 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 09:17:05 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 09:17:05 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 09:17:05 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 09:17:05 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:17:05 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:17:05 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 09:17:05 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:17:05 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:17:05 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:17:05 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:17:05 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:17:05 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 09:17:05 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:17:03 IST 2021]; root of context hierarchy
+2021-04-29 09:17:05 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:17:03 IST 2021]; root of context hierarchy
+2021-04-29 09:17:05 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@433ef204
+2021-04-29 09:17:06 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:17:03 IST 2021]; root of context hierarchy
+2021-04-29 09:17:29 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 09:17:29 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@54bff557: startup date [Thu Apr 29 09:17:29 IST 2021]; root of context hierarchy
+2021-04-29 09:17:30 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 09:17:30 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 09:17:30 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 09:17:30 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 09:17:30 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 09:17:30 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 09:17:30 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 09:17:30 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 09:17:31 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 09:17:31 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 09:17:31 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 09:17:31 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 09:17:31 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 09:17:31 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 09:17:31 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 09:17:31 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 09:17:31 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 09:17:31 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 09:17:31 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 09:17:31 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 09:17:31 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 09:17:31 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 09:17:31 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 09:17:31 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 09:17:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 09:17:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 09:17:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:17:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 09:17:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:17:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:17:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:17:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:17:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:17:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 09:17:31 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:17:31 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@54bff557: startup date [Thu Apr 29 09:17:29 IST 2021]; root of context hierarchy
+2021-04-29 09:17:31 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@54bff557: startup date [Thu Apr 29 09:17:29 IST 2021]; root of context hierarchy
+2021-04-29 09:17:32 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@103c97ff
+2021-04-29 09:17:32 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@54bff557: startup date [Thu Apr 29 09:17:29 IST 2021]; root of context hierarchy
+2021-04-29 09:33:30 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 09:33:30 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:33:30 IST 2021]; root of context hierarchy
+2021-04-29 09:33:30 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 09:33:30 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 09:33:30 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 09:33:30 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 09:33:31 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 09:33:31 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 09:33:31 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 09:33:31 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 09:33:31 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 09:33:31 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 09:33:31 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 09:33:31 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 09:33:31 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 09:33:31 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 09:33:31 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 09:33:31 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 09:33:31 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 09:33:31 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 09:33:31 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 09:33:31 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 09:33:31 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 09:33:31 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 09:33:31 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 09:33:31 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 09:33:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 09:33:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 09:33:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 09:33:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:33:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:33:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:33:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:33:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:33:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:33:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 09:33:32 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:33:32 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:33:30 IST 2021]; root of context hierarchy
+2021-04-29 09:33:32 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:33:30 IST 2021]; root of context hierarchy
+2021-04-29 09:33:32 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@4dd2ef54
+2021-04-29 09:33:32 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@5be4be74
+2021-04-29 09:33:32 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:33:30 IST 2021]; root of context hierarchy
+2021-04-29 09:37:11 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 09:37:11 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:37:11 IST 2021]; root of context hierarchy
+2021-04-29 09:37:12 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 09:37:12 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 09:37:12 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 09:37:12 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 09:37:12 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 09:37:12 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 09:37:12 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 09:37:12 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 09:37:13 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 09:37:13 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 09:37:13 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 09:37:13 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 09:37:13 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 09:37:13 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 09:37:13 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 09:37:13 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 09:37:13 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 09:37:13 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 09:37:13 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 09:37:13 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 09:37:13 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 09:37:13 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 09:37:13 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 09:37:13 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 09:37:13 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 09:37:13 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 09:37:13 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:37:13 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:37:13 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:37:13 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 09:37:13 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:37:13 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:37:13 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:37:13 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:37:13 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 09:37:13 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:37:11 IST 2021]; root of context hierarchy
+2021-04-29 09:37:13 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:37:11 IST 2021]; root of context hierarchy
+2021-04-29 09:37:13 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@433ef204
+2021-04-29 09:37:14 WARN  PageNotFound:1176 - No mapping found for HTTP request with URI [/register] in DispatcherServlet with name ''
+2021-04-29 09:37:14 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:37:11 IST 2021]; root of context hierarchy
+2021-04-29 09:38:04 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 09:38:05 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:38:05 IST 2021]; root of context hierarchy
+2021-04-29 09:38:05 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 09:38:05 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 09:38:05 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 09:38:05 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 09:38:06 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 09:38:06 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 09:38:06 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 09:38:06 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 09:38:06 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 09:38:06 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 09:38:06 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 09:38:06 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 09:38:06 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 09:38:06 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 09:38:06 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 09:38:06 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 09:38:06 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 09:38:06 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 09:38:06 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 09:38:06 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 09:38:06 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 09:38:06 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 09:38:06 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 09:38:06 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 09:38:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 09:38:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 09:38:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:38:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:38:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:38:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 09:38:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:38:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:38:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:38:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:38:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 09:38:07 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:38:05 IST 2021]; root of context hierarchy
+2021-04-29 09:38:07 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:38:05 IST 2021]; root of context hierarchy
+2021-04-29 09:38:07 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@433ef204
+2021-04-29 09:38:07 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:38:05 IST 2021]; root of context hierarchy
+2021-04-29 09:39:04 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 09:39:04 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:39:04 IST 2021]; root of context hierarchy
+2021-04-29 09:39:05 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 09:39:05 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 09:39:05 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 09:39:05 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 09:39:05 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 09:39:05 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 09:39:05 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 09:39:05 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 09:39:06 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 09:39:06 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 09:39:06 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 09:39:06 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 09:39:06 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 09:39:06 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 09:39:06 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 09:39:06 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 09:39:06 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 09:39:06 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 09:39:06 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 09:39:06 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 09:39:06 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 09:39:06 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 09:39:06 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 09:39:06 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 09:39:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 09:39:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 09:39:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:39:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:39:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:39:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 09:39:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:39:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:39:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:39:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:39:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 09:39:06 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:39:04 IST 2021]; root of context hierarchy
+2021-04-29 09:39:06 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:39:04 IST 2021]; root of context hierarchy
+2021-04-29 09:39:06 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@433ef204
+2021-04-29 09:39:06 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:39:04 IST 2021]; root of context hierarchy
+2021-04-29 09:42:09 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 09:42:10 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:42:10 IST 2021]; root of context hierarchy
+2021-04-29 09:42:10 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 09:42:10 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 09:42:10 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 09:42:10 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 09:42:10 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 09:42:11 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 09:42:11 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 09:42:11 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 09:42:11 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 09:42:11 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 09:42:11 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 09:42:11 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 09:42:11 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 09:42:11 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 09:42:11 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 09:42:11 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 09:42:11 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 09:42:11 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 09:42:11 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 09:42:11 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 09:42:11 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 09:42:11 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 09:42:11 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 09:42:11 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 09:42:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 09:42:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 09:42:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:42:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:42:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:42:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:42:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 09:42:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:42:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:42:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:42:11 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 09:42:12 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:42:10 IST 2021]; root of context hierarchy
+2021-04-29 09:42:12 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:42:10 IST 2021]; root of context hierarchy
+2021-04-29 09:42:12 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@4dd2ef54
+2021-04-29 09:42:12 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@2450256f
+2021-04-29 09:42:12 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:42:10 IST 2021]; root of context hierarchy
+2021-04-29 09:42:25 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 09:42:26 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:42:26 IST 2021]; root of context hierarchy
+2021-04-29 09:42:26 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 09:42:26 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 09:42:26 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 09:42:26 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 09:42:26 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 09:42:27 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 09:42:27 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 09:42:27 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 09:42:27 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 09:42:27 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 09:42:27 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 09:42:27 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 09:42:27 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 09:42:27 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 09:42:27 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 09:42:27 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 09:42:27 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 09:42:27 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 09:42:27 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 09:42:27 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 09:42:27 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 09:42:27 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 09:42:27 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 09:42:27 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 09:42:27 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 09:42:27 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 09:42:27 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:42:27 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:42:27 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:42:27 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 09:42:27 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:42:27 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:42:27 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:42:27 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:42:27 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 09:42:28 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:42:26 IST 2021]; root of context hierarchy
+2021-04-29 09:42:28 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:42:26 IST 2021]; root of context hierarchy
+2021-04-29 09:42:28 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@4dd2ef54
+2021-04-29 09:42:28 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@5cce40d7
+2021-04-29 09:42:28 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:42:26 IST 2021]; root of context hierarchy
+2021-04-29 09:47:20 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 09:47:20 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 09:47:20 IST 2021]; root of context hierarchy
+2021-04-29 09:47:21 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 09:47:21 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 09:47:21 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 09:47:21 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 09:47:21 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 09:47:21 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 09:47:21 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 09:47:21 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 09:47:22 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 09:47:22 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 09:47:22 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 09:47:22 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 09:47:22 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 09:47:22 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 09:47:22 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 09:47:22 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 09:47:22 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 09:47:22 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 09:47:22 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 09:47:22 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 09:47:22 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 09:47:22 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 09:47:22 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 09:47:22 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 09:47:22 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 09:47:22 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 09:47:22 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:47:22 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 09:47:22 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:47:22 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:47:22 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:47:22 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:47:22 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:47:22 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:47:22 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 09:47:22 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 09:47:20 IST 2021]; root of context hierarchy
+2021-04-29 09:47:22 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 09:47:20 IST 2021]; root of context hierarchy
+2021-04-29 09:47:23 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@433ef204
+2021-04-29 09:47:23 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 09:47:20 IST 2021]; root of context hierarchy
+2021-04-29 09:48:05 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 09:48:05 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 09:48:05 IST 2021]; root of context hierarchy
+2021-04-29 09:48:06 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 09:48:06 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 09:48:06 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 09:48:06 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 09:48:06 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 09:48:06 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 09:48:06 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 09:48:07 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 09:48:07 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 09:48:07 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 09:48:07 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 09:48:07 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 09:48:07 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 09:48:07 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 09:48:07 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 09:48:07 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 09:48:07 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 09:48:07 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 09:48:07 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 09:48:07 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 09:48:07 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 09:48:07 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 09:48:07 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 09:48:07 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 09:48:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 09:48:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 09:48:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:48:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:48:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:48:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:48:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 09:48:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:48:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:48:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:48:07 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 09:48:07 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 09:48:05 IST 2021]; root of context hierarchy
+2021-04-29 09:48:08 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 09:48:05 IST 2021]; root of context hierarchy
+2021-04-29 09:48:08 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@433ef204
+2021-04-29 09:48:08 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@52af26ee: startup date [Thu Apr 29 09:48:05 IST 2021]; root of context hierarchy
+2021-04-29 09:53:04 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 09:53:04 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:53:04 IST 2021]; root of context hierarchy
+2021-04-29 09:53:05 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 09:53:05 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 09:53:05 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 09:53:05 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 09:53:05 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 09:53:06 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 09:53:06 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 09:53:06 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 09:53:06 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 09:53:06 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 09:53:06 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 09:53:06 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 09:53:06 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 09:53:06 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 09:53:06 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 09:53:06 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 09:53:06 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 09:53:06 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 09:53:06 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 09:53:06 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 09:53:06 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 09:53:06 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 09:53:06 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 09:53:06 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 09:53:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 09:53:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 09:53:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:53:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:53:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 09:53:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:53:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:53:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:53:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:53:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 09:53:06 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:53:07 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:53:04 IST 2021]; root of context hierarchy
+2021-04-29 09:53:07 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:53:04 IST 2021]; root of context hierarchy
+2021-04-29 09:53:07 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@4dd2ef54
+2021-04-29 09:53:07 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@71bb8b34
+2021-04-29 09:53:07 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:53:04 IST 2021]; root of context hierarchy
+2021-04-29 09:53:31 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 09:53:32 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:53:32 IST 2021]; root of context hierarchy
+2021-04-29 09:53:32 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 09:53:32 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 09:53:32 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 09:53:32 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 09:53:33 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 09:53:33 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 09:53:33 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 09:53:33 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 09:53:33 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 09:53:33 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 09:53:33 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 09:53:33 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 09:53:33 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 09:53:33 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 09:53:33 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 09:53:33 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 09:53:33 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 09:53:33 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 09:53:33 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 09:53:33 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 09:53:33 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 09:53:33 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 09:53:33 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 09:53:33 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 09:53:34 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 09:53:34 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 09:53:34 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:53:34 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 09:53:34 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:53:34 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:53:34 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:53:34 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:53:34 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:53:34 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:53:34 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 09:53:34 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:53:32 IST 2021]; root of context hierarchy
+2021-04-29 09:53:34 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:53:32 IST 2021]; root of context hierarchy
+2021-04-29 09:53:34 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@4dd2ef54
+2021-04-29 09:53:34 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@71bb8b34
+2021-04-29 09:53:34 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:53:32 IST 2021]; root of context hierarchy
+2021-04-29 09:54:38 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 09:54:38 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:54:38 IST 2021]; root of context hierarchy
+2021-04-29 09:54:39 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 09:54:39 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 09:54:39 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 09:54:39 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 09:54:39 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 09:54:39 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 09:54:39 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 09:54:39 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 09:54:40 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 09:54:40 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 09:54:40 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 09:54:40 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 09:54:40 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 09:54:40 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 09:54:40 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 09:54:40 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 09:54:40 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 09:54:40 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 09:54:40 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 09:54:40 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 09:54:40 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 09:54:40 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 09:54:40 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 09:54:40 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 09:54:40 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 09:54:40 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 09:54:40 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:54:40 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:54:40 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:54:40 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:54:40 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 09:54:40 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:54:40 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:54:40 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 09:54:40 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:54:40 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:54:38 IST 2021]; root of context hierarchy
+2021-04-29 09:54:40 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:54:38 IST 2021]; root of context hierarchy
+2021-04-29 09:54:40 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@4dd2ef54
+2021-04-29 09:54:40 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@71bb8b34
+2021-04-29 09:54:41 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:54:38 IST 2021]; root of context hierarchy
+2021-04-29 09:55:28 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 09:55:29 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:55:29 IST 2021]; root of context hierarchy
+2021-04-29 09:55:29 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 09:55:29 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 09:55:29 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 09:55:29 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 09:55:29 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 09:55:30 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 09:55:30 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 09:55:30 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 09:55:30 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 09:55:30 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 09:55:30 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 09:55:30 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 09:55:30 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 09:55:30 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 09:55:30 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 09:55:30 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 09:55:30 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 09:55:30 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 09:55:30 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 09:55:30 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 09:55:30 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 09:55:30 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 09:55:30 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 09:55:30 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 09:55:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 09:55:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 09:55:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:55:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:55:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:55:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 09:55:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 09:55:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:55:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:55:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 09:55:30 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 09:55:31 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:55:29 IST 2021]; root of context hierarchy
+2021-04-29 09:55:31 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:55:29 IST 2021]; root of context hierarchy
+2021-04-29 09:55:31 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@4dd2ef54
+2021-04-29 09:55:31 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@71bb8b34
+2021-04-29 09:55:31 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@4f2b503c: startup date [Thu Apr 29 09:55:29 IST 2021]; root of context hierarchy
