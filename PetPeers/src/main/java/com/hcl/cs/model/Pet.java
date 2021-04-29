@@ -82,18 +82,15 @@ public class Pet {
 		this.user = user;
 	}
 
-	public Pet(long petId, String petName, int petAge, String petPlace, User user) {
+	public Pet(String petName, int petAge, String petPlace) {
 		super();
-		this.petId = petId;
 		this.petName = petName;
 		this.petAge = petAge;
 		this.petPlace = petPlace;
-		this.user = user;
 	}
 
 	public Pet() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
 }

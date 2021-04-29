@@ -33,7 +33,7 @@ public class UserDAOTest {
 	}
 	
 	@Test
-	//@Ignore
+	@Ignore
 	public void testAuthenticateUser() {
 		User foundUser = userDao.authenticateUser("Ayush","123456");
 		assertEquals(foundUser.getUserName(),"Ayush");

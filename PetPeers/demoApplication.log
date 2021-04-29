@@ -377,3 +377,415 @@ Caused by: java.sql.SQLNonTransientConnectionException: Public Key Retrieval is 
 2021-04-29 01:01:07 WARN  HqlSqlWalker:996 - [DEPRECATION] Encountered positional parameter near line 1, column 56.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
 2021-04-29 01:01:07 WARN  HqlSqlWalker:996 - [DEPRECATION] Encountered positional parameter near line 1, column 77.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
 2021-04-29 01:01:08 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@693fe6c9: startup date [Thu Apr 29 01:01:04 IST 2021]; root of context hierarchy
+2021-04-29 08:02:01 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 08:02:02 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6631f5ca: startup date [Thu Apr 29 08:02:02 IST 2021]; root of context hierarchy
+2021-04-29 08:02:02 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 08:02:02 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 08:02:02 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 08:02:02 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 08:02:03 WARN  JdbcServicesImpl:204 - HHH000342: Could not obtain connection to query metadata : Cannot create PoolableConnectionFactory (Public Key Retrieval is not allowed)
+2021-04-29 08:02:03 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 08:02:03 INFO  LobCreatorBuilder:88 - HHH000422: Disabling contextual LOB creation as connection was null
+2021-04-29 08:02:03 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 08:02:03 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 08:02:03 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 08:02:03 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 08:02:03 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 08:02:03 ERROR SchemaUpdate:201 - HHH000319: Could not get database metadata
+org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Public Key Retrieval is not allowed)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:139)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:522)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1857)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1928)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:372)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:454)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:134)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:61)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:768)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 93 more
+2021-04-29 08:02:03 ERROR SchemaUpdate:247 - HHH000299: Could not complete schema update
+org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Public Key Retrieval is not allowed)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:139)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:522)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1857)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1928)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:372)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:454)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1687)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1624)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:134)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:61)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:768)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Caused by: java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 93 more
+2021-04-29 08:02:04 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 08:02:04 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 08:02:04 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:02:04 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 08:02:04 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:02:04 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:02:04 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:02:04 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:02:04 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:02:04 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 08:02:04 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:02:04 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6631f5ca: startup date [Thu Apr 29 08:02:02 IST 2021]; root of context hierarchy
+2021-04-29 08:02:04 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6631f5ca: startup date [Thu Apr 29 08:02:02 IST 2021]; root of context hierarchy
+2021-04-29 08:02:05 WARN  SqlExceptionHelper:144 - SQL Error: 0, SQLState: null
+2021-04-29 08:02:05 ERROR SqlExceptionHelper:146 - Cannot create PoolableConnectionFactory (Public Key Retrieval is not allowed)
+2021-04-29 08:02:05 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@6631f5ca: startup date [Thu Apr 29 08:02:02 IST 2021]; root of context hierarchy
+2021-04-29 08:02:37 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 08:02:37 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6631f5ca: startup date [Thu Apr 29 08:02:37 IST 2021]; root of context hierarchy
+2021-04-29 08:02:37 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 08:02:38 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 08:02:38 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 08:02:38 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 08:02:38 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 08:02:38 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 08:02:38 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 08:02:38 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 08:02:39 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 08:02:39 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 08:02:39 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 08:02:39 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 08:02:39 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 08:02:39 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 08:02:39 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 08:02:39 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 08:02:39 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 08:02:39 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 08:02:39 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 08:02:39 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 08:02:39 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 08:02:39 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 08:02:39 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 08:02:39 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 08:02:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 08:02:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 08:02:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:02:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:02:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 08:02:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:02:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:02:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:02:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:02:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:02:39 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 08:02:39 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6631f5ca: startup date [Thu Apr 29 08:02:37 IST 2021]; root of context hierarchy
+2021-04-29 08:02:39 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6631f5ca: startup date [Thu Apr 29 08:02:37 IST 2021]; root of context hierarchy
+2021-04-29 08:02:40 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@6631f5ca: startup date [Thu Apr 29 08:02:37 IST 2021]; root of context hierarchy
+2021-04-29 08:12:53 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 08:12:54 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5ace1ed4: startup date [Thu Apr 29 08:12:54 IST 2021]; root of context hierarchy
+2021-04-29 08:12:54 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 08:12:54 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 08:12:54 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 08:12:54 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 08:12:55 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 08:12:55 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 08:12:55 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 08:12:55 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 08:12:55 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 08:12:55 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 08:12:55 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 08:12:55 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 08:12:55 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 08:12:55 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 08:12:55 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 08:12:56 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 08:12:56 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 08:12:56 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 08:12:56 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 08:12:56 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 08:12:56 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 08:12:56 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 08:12:56 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 08:12:56 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 08:12:56 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 08:12:56 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 08:12:56 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:12:56 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:12:56 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 08:12:56 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:12:56 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:12:56 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:12:56 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:12:56 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:12:56 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 08:12:56 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5ace1ed4: startup date [Thu Apr 29 08:12:54 IST 2021]; root of context hierarchy
+2021-04-29 08:12:56 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5ace1ed4: startup date [Thu Apr 29 08:12:54 IST 2021]; root of context hierarchy
+2021-04-29 08:12:57 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@5ace1ed4: startup date [Thu Apr 29 08:12:54 IST 2021]; root of context hierarchy
+2021-04-29 08:16:50 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 08:16:50 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5ace1ed4: startup date [Thu Apr 29 08:16:50 IST 2021]; root of context hierarchy
+2021-04-29 08:16:51 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 08:16:51 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 08:16:51 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 08:16:51 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 08:16:51 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 08:16:51 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 08:16:51 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 08:16:51 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 08:16:52 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 08:16:52 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 08:16:52 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 08:16:52 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 08:16:52 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 08:16:52 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 08:16:52 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 08:16:52 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 08:16:52 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 08:16:52 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 08:16:52 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 08:16:52 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 08:16:52 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 08:16:52 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 08:16:52 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 08:16:52 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 08:16:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 08:16:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 08:16:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:16:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:16:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 08:16:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:16:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:16:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:16:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:16:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:16:52 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 08:16:53 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5ace1ed4: startup date [Thu Apr 29 08:16:50 IST 2021]; root of context hierarchy
+2021-04-29 08:16:53 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5ace1ed4: startup date [Thu Apr 29 08:16:50 IST 2021]; root of context hierarchy
+2021-04-29 08:16:53 WARN  HqlSqlWalker:996 - [DEPRECATION] Encountered positional parameter near line 1, column 58.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+2021-04-29 08:16:53 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@5ace1ed4: startup date [Thu Apr 29 08:16:50 IST 2021]; root of context hierarchy
+2021-04-29 08:19:56 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [testConfig-servlet.xml]
+2021-04-29 08:19:56 INFO  GenericWebApplicationContext:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@693fe6c9: startup date [Thu Apr 29 08:19:56 IST 2021]; root of context hierarchy
+2021-04-29 08:19:56 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2021-04-29 08:19:56 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2021-04-29 08:19:56 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2021-04-29 08:19:56 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2021-04-29 08:19:57 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-04-29 08:19:57 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2021-04-29 08:19:57 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2021-04-29 08:19:57 INFO  Version:30 - HV000001: Hibernate Validator 5.4.3.Final
+2021-04-29 08:19:57 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2021-04-29 08:19:57 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2021-04-29 08:19:57 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2021-04-29 08:19:57 INFO  TableMetadata:66 - HHH000261: Table found: petsdb.pet
+2021-04-29 08:19:57 INFO  TableMetadata:67 - HHH000037: Columns: [petplace, petid, petname, petage, petownerid]
+2021-04-29 08:19:57 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_rs8odg6oh8nxtntcpoyv8kkbh]
+2021-04-29 08:19:57 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_rs8odg6oh8nxtntcpoyv8kkbh, primary]
+2021-04-29 08:19:57 INFO  TableMetadata:66 - HHH000261: Table found: handson.user
+2021-04-29 08:19:57 INFO  TableMetadata:67 - HHH000037: Columns: [name, userid, age]
+2021-04-29 08:19:57 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2021-04-29 08:19:57 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2021-04-29 08:19:57 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column USERNAME varchar(255)
+2021-04-29 08:19:57 ERROR SchemaUpdate:237 - Duplicate column name 'USERNAME'
+2021-04-29 08:19:57 ERROR SchemaUpdate:236 - HHH000388: Unsuccessful: alter table USER add column PASSWORD varchar(255)
+2021-04-29 08:19:57 ERROR SchemaUpdate:237 - Duplicate column name 'PASSWORD'
+2021-04-29 08:19:57 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2021-04-29 08:19:57 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.index()
+2021-04-29 08:19:57 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.MainController.logout(javax.servlet.http.HttpServletRequest)
+2021-04-29 08:19:57 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/home],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.home(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:19:57 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/savePet],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.PetController.savePet(com.hcl.cs.model.Pet,org.springframework.validation.BindingResult,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:19:57 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/buyPet/{pid}],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.buyPet(javax.servlet.http.HttpServletRequest,long)
+2021-04-29 08:19:57 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/addPet],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.addPet(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:19:57 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/myPets],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.PetController.myPets(javax.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)
+2021-04-29 08:19:57 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.login(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:19:57 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/authenticateUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserLoginController.authenticateUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:19:57 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/register],methods=[GET]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.register(org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2021-04-29 08:19:57 INFO  RequestMappingHandlerMapping:543 - Mapped "{[/saveUser],methods=[POST]}" onto public java.lang.String com.hcl.cs.controller.UserRegisterController.saveUser(com.hcl.cs.model.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2021-04-29 08:19:58 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@693fe6c9: startup date [Thu Apr 29 08:19:56 IST 2021]; root of context hierarchy
+2021-04-29 08:19:58 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@693fe6c9: startup date [Thu Apr 29 08:19:56 IST 2021]; root of context hierarchy
+2021-04-29 08:19:58 WARN  HqlSqlWalker:996 - [DEPRECATION] Encountered positional parameter near line 1, column 51.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+2021-04-29 08:19:58 WARN  HqlSqlWalker:996 - [DEPRECATION] Encountered positional parameter near line 1, column 68.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+2021-04-29 08:19:58 WARN  HqlSqlWalker:996 - [DEPRECATION] Encountered positional parameter near line 1, column 58.  Positional parameter are considered deprecated; use named parameters or JPA-style positional parameters instead.
+2021-04-29 08:19:58 INFO  GenericWebApplicationContext:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@693fe6c9: startup date [Thu Apr 29 08:19:56 IST 2021]; root of context hierarchy
