@@ -1,7 +1,5 @@
 package com.hcl.cs.model;
 
-
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -34,7 +32,7 @@ public class User {
 	@Transient
 	private String confirmPassword;
 	
-	@OneToMany(mappedBy="user",fetch=FetchType.EAGER,cascade = CascadeType.ALL,orphanRemoval=true)
+	@OneToMany(mappedBy="user",fetch=FetchType.LAZY,cascade = CascadeType.ALL,orphanRemoval=true)
 	private Set<Pet> pets = new HashSet<Pet>();
 
 	public long getUserId() {
