@@ -14,6 +14,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 @Entity
 @Table(name="USER")
 public class User {
@@ -22,13 +24,14 @@ public class User {
 	@Column(name="USERID")
 	private long userId;
 	
-	
+	@NotEmpty
 	@Column(name="USERNAME",unique=true)
 	private String userName;
 
+	@NotEmpty
 	@Column(name="PASSWORD")
 	private String userPassword;
-
+	
 	@Transient
 	private String confirmPassword;
 	

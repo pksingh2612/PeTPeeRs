@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.hcl.cs.controller.UserRegisterController;
 import com.hcl.cs.dao.UserDAO;
 import com.hcl.cs.model.User;
 
