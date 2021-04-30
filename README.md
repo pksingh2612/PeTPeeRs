@@ -27,5 +27,41 @@ Code repo for Pet Peers Application
 
 ## Page Layout Design
 
-- Login Page[images/loginPage.png]
-- 
+
+
+- Login Page
+    <p align="center"><img src="https://github.com/pksingh2612/PeTPeeRs/blob/main/images/lohinPage.png?raw=true"></p>
+
+
+- Register Page
+    <p align="center"><img src="https://github.com/pksingh2612/PeTPeeRs/blob/main/images/registerPage.png?raw=true"></p>
+
+
+- Home Page
+    <p align="center"><img src="https://github.com/pksingh2612/PeTPeeRs/blob/main/images/homePage.png?raw=true"></p>
+
+    <p align="center"><img src="https://github.com/pksingh2612/PeTPeeRs/blob/main/images/homePage2.png?raw=true"></p>
+
+
+- MyPet Page
+    <p align="center"><img src="https://github.com/pksingh2612/PeTPeeRs/blob/main/images/myPetPage.png?raw=true"></p>
+
+
+- AddPet Page
+    <p align="center"><img src="https://github.com/pksingh2612/PeTPeeRs/blob/main/images/addPetPage.png?raw=true"></p>
+
+
+
+## Running the project
+    URL: http://localhost:8080/PetPeers/ .
+
+## Database Setup
+
+- Database Name - petsdb
+- Database Username - root
+- Database Password - 1234
+
+Note: To run the project need to start Tomcat Server and MySQL CLI on your local system.
+
+## File Structure of Project
+
