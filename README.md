@@ -62,6 +62,3 @@ Code repo for Pet Peers Application
 - Database Password - 1234
 
 Note: To run the project need to start Tomcat Server and MySQL CLI on your local system.
-
-## File Structure of Project
-
